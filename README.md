@@ -32,6 +32,7 @@
   </a>
 </p>
 
+Reperio is a Latin word, which means to find/seek out. This software uses dark majic
 Concept behind Invenio is simple, just like we host phishing pages to get credentials why not host a fake page that requests your location like many popular location based websites. Invenio uses Quo's dark majic for different functionalities.
  Read more on <a href="https://thewhiteh4t.github.io"> thewhiteh4t's Blog </a>.Seeker Hosts a fake website which asks for Location Permission and if the target allows it, we can get :
 
