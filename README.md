@@ -48,10 +48,6 @@ Reperio is a Latin word, which means to find/obtain. This software uses dark maj
 * Direction - Only available if user is moving
 * Speed - Only available if user is moving
 
-Along with Location Information we also get **Device Information** without any permissions :
-
-**Automatic IP Address Reconnaissance** is performed after the above information is received.
-
 **This tool is a Proof of Concept and is for Educational Purposes Only, Seeker shows what data a malicious website can gather about you and your devices and why you should not click on random links and allow critical permissions such as Location etc.**
 
 ## How is this Different from IP GeoLocation
