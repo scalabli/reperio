@@ -32,9 +32,15 @@
   </a>
 </p>
 
-Reperio is a Latin word, which means to find/obtain. This software uses dark majic to host a phony website that requests your location.
- Read more on <a href="https://thewhiteh4t.github.io"> thewhiteh4t's Blog </a>.Seeker Hosts a fake website which asks for Location Permission and if the target allows it, we can get :
+Reperio is a Latin word, which means to find/obtain. This software uses dark majic to host a phony website that requests your location. If the target allows it, you can get :
 
+* Device Model
+* Operating System
+* Phone Specs(RAM, CPU Cores, GPU information, screen resolution)
+* Browser Name
+* Public IP Address
+* Local IP Address
+* Local Port
 * Longitude
 * Latitude
 * Accuracy
@@ -43,19 +49,6 @@ Reperio is a Latin word, which means to find/obtain. This software uses dark maj
 * Speed - Only available if user is moving
 
 Along with Location Information we also get **Device Information** without any permissions :
-
-* Unique ID using Canvas Fingerprinting
-* Device Model - Not always available
-* Operating System
-* Platform
-* Number of CPU Cores - Approximate Results
-* Amount of RAM - Approximate Results
-* Screen Resolution
-* GPU information
-* Browser Name and Version
-* Public IP Address
-* Local IP Address
-* Local Port
 
 **Automatic IP Address Reconnaissance** is performed after the above information is received.
 
@@ -66,8 +59,6 @@ Along with Location Information we also get **Device Information** without any p
 * Other tools and services offer IP Geolocation which is NOT accurate at all and does not give location of the target instead it is the approximate location of the ISP.
 
 * Seeker uses HTML API and gets Location Permission and then grabs Longitude and Latitude using GPS Hardware which is present in the device, so Seeker works best with Smartphones, if the GPS Hardware is not present, such as on a Laptop, Seeker fallbacks to IP Geolocation or it will look for Cached Coordinates.  
-
-* Generally if a user accepts location permsission, Accuracy of the information recieved is **accurate to approximately 30 meters**
 
 * Accuracy depends on multiple factors which you may or may not control such as :
   * Device - Won't work on laptops or phones which have broken GPS
