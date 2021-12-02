@@ -33,8 +33,8 @@ Reperio is a Latin word, which means to find/obtain. This software uses dark maj
 Available Templates : 
 
 * Nearby
-* Google Drive (Suggested by @Akaal_no_one)
-* WhatsApp (Suggested by @Dazmed707)
+* Google Drive
+* WhatsApp
 * Telegram
 
 ## Tested On :
@@ -51,67 +51,62 @@ Available Templates :
 ### Kali Linux / Ubuntu / Parrot OS
 
 ```console
-git clone https://github.com/reperio/reperio.git
+git clone https://github.com/secretum-inc/reperio.git
 cd reperio/
 sh install
-apt update
-apt install python3 python3-pip php
-pip3 install requests
 ```
 
-### BlackArch Linux
+### Arch Linux
 
-```bash
-pacman -S seeker
+```console
+git clone https://github.com/secretum-inc/reperio.git
+cd reperio/
+sh archlinux_install
 ```
 
 ### Termux
 
-```bash
-git clone https://github.com/thewhiteh4t/seeker.git
-cd seeker/
-pkg update
-pkg install python php
-pip3 install requests
+```console
+git clone https://github.com/secretum-inc/reperio.git
+cd reperio/
+sh termux_install
 ```
 ### Docker
 
-```bash
-docker pull thewhiteh4t/seeker
+```console
+docker pull secretum-inc/reperio
 ```
 
 ## Usage
 
-```bash
-python3 seeker.py -h
+```console
+python3 reperio.py -h
 
-usage: seeker.py [-h] [-s SUBDOMAIN]
+usage: reperio.py [-h] [-s SUBDOMAIN]
 
 optional arguments:
   -h, --help            show this help message and exit
   -k KML, --kml         Provide KML Filename ( Optional )
   -p PORT, --port       Port for Web Server [ Default : 8080 ]
   -t TUNNEL, --tunnel   Specify Tunnel Mode [ Available : manual ]
+```
 
-##################
-# Usage Examples #
-##################
+### Usage Examples
 
-# Step 1 : In first terminal
-$ python3 seeker.py -t manual
 
-# Step 2 : In second terminal start a tunnel service such as ngrok
-$ ./ngrok http 8080
+🚀  $ python3 reperio.py -t manual
+
+🚀  $ ./ngrok http 8080. # Open second terminal and start ngrock tunnel service
 
 ###########
 # Options #
 ###########
 
 # Ouput KML File for Google Earth
-$ python3 seeker.py -t manual -k <filename>
+$ python3 reperio.py -t manual -k <filename>
 
 # Use Custom Port
-$ python3 seeker.py -t manual -p 1337
+$ python3 reperio.py -t manual -p 1337
 $ ./ngrok http 1337
 
 ################
@@ -122,8 +117,8 @@ $ ./ngrok http 1337
 $ docker network create ngroknet
 
 # Step 2
-$ docker run --rm -it --net ngroknet --name seeker thewhiteh4t/seeker
+$ docker run --rm -it --net ngroknet --name reperio secretum-inc/reperio
 
 # Step 3
-$ docker run --rm -it --net ngroknet --name ngrok wernight/ngrok ngrok http seeker:8080
+$ docker run --rm -it --net ngroknet --name ngrok wernight/ngrok ngrok http reperio:8080
 ```
