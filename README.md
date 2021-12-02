@@ -84,25 +84,32 @@ optional arguments:
 
 ### Usage Examples
 
+```console
 
-🚀  $ python3 reperio.py -t manual
+  $ python3 reperio.py -t manual
 
-🚀  $ ./ngrok http 8080. # Open second terminal and start ngrock tunnel service
+  $ ./ngrok http 8080. # Open second terminal and start ngrock tunnel service
 
-###########
-# Options #
-###########
+```
 
-# Ouput KML File for Google Earth
+# Options
+
+### Ouput KML File for Google Earth 🌍 
+
+```console
 $ python3 reperio.py -t manual -k <filename>
 
+```
+
 # Use Custom Port
+
+```console
 $ python3 reperio.py -t manual -p 1337
 $ ./ngrok http 1337
 
-################
-# Docker Usage #
-################
+```
+
+# Docker Usage 
 
 # Step 1
 $ docker network create ngroknet
