@@ -37,15 +37,6 @@ Available Templates :
 * WhatsApp
 * Telegram
 
-## Tested On :
-
-* Kali Linux
-* BlackArch Linux
-* Ubuntu
-* Kali Nethunter
-* Termux
-* Parrot OS
-
 ## Installation
 
 ### Kali Linux / Ubuntu / Parrot OS
