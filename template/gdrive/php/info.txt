@@ -1,1 +1,1 @@
-{"dev":[{"platform":"Linux armv7l","browser":"Chrome\/96.0.4664.45","cores":"4","ram":"2","vendor":"ARM","render":"Mali-400 MP","ip":"196.207.171.189","ht":"750","wd":"360","os":"Android 8.1.0"}]}
+{"dev":[{"platform":"Linux armv8l","browser":"Chrome\/90.0.4430.210","cores":"112","ram":"8","vendor":"Qualcomm","render":"Adreno (TM) 506","ip":"62.8.95.69","ht":"740","wd":"360","os":"Android 10"}]}

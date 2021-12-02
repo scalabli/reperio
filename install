@@ -1,15 +1,19 @@
+#!/bin/bash
+
 echo '[!] Updating...'
-pacman -Sy > install.log
+apt update
 echo
 echo '[!] Installing Dependencies...'
 echo '    Python3'
-yes | pacman -S python3 python-pip --needed &>> install.log
+apt install python3 pip
+echo '    Quo'
+pip3 install quo
 echo '    PHP'
-yes | pacman -S php --needed &>> install.log
+apt-get -y install php
 echo '    ssh'
-yes | pacman -S openssh --needed &>> install.log
+apt-get -y install ssh
 echo '    Requests'
-pip3 install requests &>> install.log
+pip3 install requests
 echo
 echo '[!] Setting Permissions...'
 chmod 777 template/nearyou/php/info.txt

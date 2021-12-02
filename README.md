@@ -15,7 +15,7 @@ Reperio is a Latin word, which means to find/obtain. This software uses dark maj
 * Direction - Only available if user is moving
 * Speed - Only available if user is moving
 
-**This tool is a Proof of Concept and is for Educational Purposes Only, Seeker shows what data a malicious website can gather about you and your devices and why you should not click on random links and allow critical permissions such as Location etc.**
+
 
 ## How is this Different from IP GeoLocation
 
@@ -32,7 +32,7 @@ Reperio is a Latin word, which means to find/obtain. This software uses dark maj
 
 Available Templates : 
 
-* NearYou
+* Nearby
 * Google Drive (Suggested by @Akaal_no_one)
 * WhatsApp (Suggested by @Dazmed707)
 * Telegram
@@ -50,9 +50,10 @@ Available Templates :
 
 ### Kali Linux / Ubuntu / Parrot OS
 
-```bash
-git clone https://github.com/thewhiteh4t/seeker.git
-cd seeker/
+```console
+git clone https://github.com/reperio/reperio.git
+cd reperio/
+sh install
 apt update
 apt install python3 python3-pip php
 pip3 install requests

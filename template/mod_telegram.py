@@ -2,23 +2,36 @@
 
 import os
 import shutil
+import quo
 
-R = '\033[31m' # red
-G = '\033[32m' # green
-C = '\033[36m' # cyan
-W = '\033[0m'  # white
+quo.echo(f"[>>]", fg="vyellow", bold=True, nl=False)
+quo.echo(f"Group Title", fg="vcyan", nl=False)
+title = quo.prompt("")
 
-title = input(G + '[+]' + C + ' Group Title : ' + W)
-desc = input(G + '[+]' + C + ' Group Description : ' + W)
-image = input(G + '[+]' + C + ' Image Path (Best Size : 300x300) : ' + W)
-mem_num = input(G + '[+]' + C + ' Number of Members : ' + W)
-online_num = input(G + '[+]' + C + ' Number of Members Online : ' + W)
+quo.echo(f"[>>]", fg="vyellow", bold=True, nl=False)
+quo.echo(f" Group Description", fg="vcyan", nl=False)
+desc = quo.prompt("")
+
+quo.echo(f"[>>]", fg="vyellow", nl=False, bold=True)
+quo.echo(f" Image Path ", fg="vcyan", nl=False)
+quo.echo(f"(Ideal image size : 300x300 )", fg="vred", nl=False)
+image = quo.prompt("")
+
+quo.echo(f"[>>]", fg="vgreen", nl=False, bold=True)
+quo.echo(f" Number of Members", fg="vcyan", nl=False)
+mem_num = quo.prompt("")
+
+quo.echo(f"[>>]", fg="vgreen", bold=True, nl=False)
+quo.echo(f" Number of members online", fg="vcyan", nl=False)
+online_num = quo.prompt("")
 
 img_name = image.split('/')[-1]
+
 try:
     shutil.copyfile(image, 'template/telegram/images/{}'.format(img_name))
+
 except Exception as e:
-    print('\n' + R + '[-]' + C + ' Exception : ' + W + str(e))
+    print('\n' + '[-]' + ' Exception : ' + str(e))
     exit()
 
 with open('template/telegram/index_temp.html', 'r') as index_temp:

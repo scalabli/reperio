@@ -2,8 +2,8 @@
 
 import quo
 
-quo.echo(f"[+] ", fg="vgreen", bold=True, nl=False)
-quo.echo(f"Enter Google Drive URL: ", fg="vcyan", nl=False)
+quo.echo(f"[>>]", fg="vgreen", bold=True, nl=False)
+quo.echo(f" Enter Google Drive URL", fg="vcyan", nl=False)
 redirect = quo.prompt("")
 with open('template/gdrive/js/location_temp.js', 'r') as js:
 	reader = js.read()

