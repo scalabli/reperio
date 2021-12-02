@@ -97,26 +97,41 @@ optional arguments:
 ### Ouput KML File for Google Earth 🌍 
 
 ```console
-$ python3 reperio.py -t manual -k <filename>
+
+  $ python3 reperio.py -t manual -k <filename>
 
 ```
 
 # Use Custom Port
 
 ```console
-$ python3 reperio.py -t manual -p 1337
-$ ./ngrok http 1337
+  $ python3 reperio.py -t manual -p 1337
+  $ ./ngrok http 1337
 
 ```
 
 # Docker Usage 
 
 # Step 1
-$ docker network create ngroknet
+
+```console
+
+ $ docker network create ngroknet
+
+```
 
 # Step 2
-$ docker run --rm -it --net ngroknet --name reperio secretum-inc/reperio
+
+```console
+
+  $ docker run --rm -it --net ngroknet --name reperio secretum-inc/reperio
+
+```
 
 # Step 3
-$ docker run --rm -it --net ngroknet --name ngrok wernight/ngrok ngrok http reperio:8080
+
+```console
+
+  $ docker run --rm -it --net ngroknet --name ngrok wernight/ngrok ngrok http reperio:8080
+
 ```
