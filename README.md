@@ -1,5 +1,7 @@
 [![Logo](https://raw.githubusercontent.com/secretum-inc/reperio/main/images/reperio.png)](https://github.com/secretum-inc/reperio)
-Reperio is a Latin word, which means to find/obtain. This software uses dark majic to host a phony website that requests your location. If the target allows it, you can get :
+**Reperio** *[rɛˈpɛrioː]* is a Latin word, which means to bring forth/obtain. 
+
+Reperio uses dark majic to host a phony website that requests your location. If the target allows it, you can get :
 
 * Device Model
 * Operating System
@@ -21,10 +23,9 @@ Reperio is a Latin word, which means to find/obtain. This software uses dark maj
 
 * Other tools and services offer IP Geolocation which is NOT accurate at all and does not give location of the target instead it is the approximate location of the ISP.
 
-* Seeker uses HTML API and gets Location Permission and then grabs Longitude and Latitude using GPS Hardware which is present in the device, so Seeker works best with Smartphones, if the GPS Hardware is not present, such as on a Laptop, Seeker fallbacks to IP Geolocation or it will look for Cached Coordinates.  
-
+* Reperio uses HTML API to get critical device information, and subsequently gains access to the location of the device and grabs Longitude and Latitude using the device's GPS Hardware. Incase the GPS Hardware is missing(in laptops), or broken, Reperio will utilise IP Geolocation.
 * Accuracy depends on multiple factors which you may or may not control such as :
-  * Device - Won't work on laptops or phones which have broken GPS
+
   * Browser - Some browsers block javascripts
   * GPS Calibration - If GPS is not calibrated you may get inaccurate results and this is very common
 
