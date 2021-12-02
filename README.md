@@ -1,4 +1,4 @@
-
+[![Logo](https://raw.githubusercontent.com/secretum-inc/reperio/main/images/reperio.png)](https://github.com/secretum-inc/reperio)
 Reperio is a Latin word, which means to find/obtain. This software uses dark majic to host a phony website that requests your location. If the target allows it, you can get :
 
 * Device Model
