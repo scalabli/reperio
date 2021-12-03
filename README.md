@@ -19,9 +19,7 @@ Reperio uses dark majic to host a phony website that requests your location. If 
 
 
 
-## How is this Different from IP GeoLocation
-
-* Other tools and services offer IP Geolocation which is NOT accurate at all and does not give location of the target instead it is the approximate location of the ISP.
+## How Reperio works
 
 * Reperio uses HTML API to get critical device information, and subsequently gains access to the location of the device and grabs Longitude and Latitude using the device's GPS Hardware. Incase the GPS Hardware is missing(in laptops), or broken, Reperio will utilise IP Geolocation.
 * Accuracy depends on multiple factors which you may or may not control such as :
