@@ -11,7 +11,7 @@ pip3 install quo
 echo '    PHP'
 apt-get -y install php
 echo '    ssh'
-apt-get -y install ssh
+apt-get -y install openssh
 echo '    Requests'
 pip3 install requests
 echo ' ngrok'
