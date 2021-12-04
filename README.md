@@ -97,14 +97,14 @@ optional arguments:
 
 ```console
 
-  $ python3 reperio.py -t manual -k <filename>
+  $ python3 reperio.py --tunnel manual -k <filename>
 
 ```
 
 # Use Custom Port
 
 ```console
-  $ python3 reperio.py -t manual -p 1337
+  $ python3 reperio.py -tunnel manual -p 1337
   $ ./ngrok http 1337
 
 ```
