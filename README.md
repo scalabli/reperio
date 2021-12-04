@@ -70,7 +70,7 @@ docker pull secretum-inc/reperio
 
 ## Configure `ngrok`
 
-Sign up for a ngrok account and obtain the *authtoken*
+Sign up for a [ngrok account](https://dashboard.ngrok.com/signup) and obtain the *authtoken*
 
 Add authtoken:
 
