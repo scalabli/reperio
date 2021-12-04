@@ -78,16 +78,16 @@ optional arguments:
   -h, --help            show this help message and exit
   -k KML, --kml         Provide KML Filename ( Optional )
   -p PORT, --port       Port for Web Server [ Default : 8080 ]
-  -t TUNNEL, --tunnel   Specify Tunnel Mode [ Available : manual ]
+  -t TUNNEL, --tunnel   Specify Tunnel Mode [ Available : select ]
 ```
 
 ### Usage Examples
 
 ```console
 
-  $ python3 reperio.py --tunnel manual
+  $ python3 reperio.py --tunnel select
 
-  $ ./ngrok http 8080. # Open second terminal and start ngrock tunnel service
+  $ ngrok http 8080. # Open second terminal and start ngrok tunnel service
 
 ```
 
@@ -97,15 +97,15 @@ optional arguments:
 
 ```console
 
-  $ python3 reperio.py --tunnel manual -k <filename>
+  $ python3 reperio.py --tunnel select -k <filename>
 
 ```
 
 # Use Custom Port
 
 ```console
-  $ python3 reperio.py -tunnel manual -p 1337
-  $ ./ngrok http 1337
+  $ python3 reperio.py -tunnel select -p 1337
+  $ ngrok http 1337
 
 ```
 
