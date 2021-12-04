@@ -3,19 +3,19 @@
 
 :information_source: Reperio uses dark majic to host a phony website that requests your location. If the target allows it, you can get :
 
-* Device Model
-* Operating System
-* Phone Specs(RAM, CPU Cores, GPU information, screen resolution)
-* Browser Name
-* Public IP Address
-* Local IP Address
-* Local Port
-* Longitude
-* Latitude
-* Accuracy
-* Altitude - Not always available
-* Direction - Only available if user is moving
-* Speed - Only available if user is moving
+* `Device Model`
+* `Operating System`
+* `Phone Specs` *(RAM, CPU Cores, GPU information, screen resolution)*
+* `Browser Name`
+* `Public IP Address`
+* `Local IP Address`
+* `Local Port`
+* `Longitude`
+* `Latitude`
+* `Accuracy`
+* `Altitude` *- Not always available*
+* `Direction` *- Only available if user is moving*
+* `Speed` *- Only available if user is moving*
 
 
 
