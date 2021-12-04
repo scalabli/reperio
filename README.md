@@ -1,7 +1,7 @@
 [![Logo](https://raw.githubusercontent.com/secretum-inc/reperio/main/images/reperio.png)](https://github.com/secretum-inc/reperio)
 **Reperio** *[rɛˈpɛrioː]* is a Latin word, which means to bring forth/obtain. 
 
-Reperio uses dark majic to host a phony website that requests your location. If the target allows it, you can get :
+:information_source: Reperio uses dark majic to host a phony website that requests your location. If the target allows it, you can get :
 
 * Device Model
 * Operating System
@@ -25,7 +25,8 @@ Reperio uses dark majic to host a phony website that requests your location. If 
 * Accuracy depends on multiple factors which you may or may not control such as :
 
   * Browser - Some browsers block javascripts
-  * GPS Calibration - If GPS is not calibrated you may get inaccurate results and this is very common
+  * IP Geolocation due to a broken GPS Hardware
+  * GPS Calibration - If GPS is not calibrated you may get inaccurate results.
 
 ## Templates
 
@@ -36,7 +37,7 @@ Available Templates :
 * WhatsApp
 * Telegram
 
-## Installation
+## Installation ⬇️
 
 ### Kali Linux / Ubuntu / Parrot OS
 
@@ -67,6 +68,16 @@ sh termux_install
 docker pull secretum-inc/reperio
 ```
 
+## Configure `ngrok`
+
+Sign up for a ngrok account and obtain the *authtoken*
+
+Add authtoken:
+
+```console
+    
+   ngrok authtoken <token>
+```
 ## Usage
 
 ```console
@@ -80,16 +91,19 @@ optional arguments:
   -p PORT, --port       Port for Web Server [ Default : 8080 ]
   -t TUNNEL, --tunnel   Specify Tunnel Mode [ Available : select ]
 ```
-
 ### Usage Examples
 
 ```console
 
   $ python3 reperio.py --tunnel select
-
-  $ ngrok http 8080. # Open second terminal and start ngrok tunnel service
-
 ```
+Open second terminal and start ngrok tunnel
+
+```console
+
+  $ ngrok http 8080
+```
+
 
 # Options
 
