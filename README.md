@@ -85,7 +85,7 @@ optional arguments:
 
 ```console
 
-  $ python3 reperio.py -t manual
+  $ python3 reperio.py --tunnel manual
 
   $ ./ngrok http 8080. # Open second terminal and start ngrock tunnel service
 
