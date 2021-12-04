@@ -51,7 +51,7 @@ else:
 parser = argparse.ArgumentParser()
 parser.add_argument('-s', '--subdomain', help='Provide Subdomain for Serveo URL ( Optional )')
 parser.add_argument('-k', '--kml', help='Provide KML Filename ( Optional )')
-parser.add_argument('-t', '--tunnel', help='Specify Tunnel Mode [ Available : manual ]')
+parser.add_argument('-t', '--tunnel', help='Specify Tunnel Mode [ Available : select]')
 parser.add_argument('-p', '--port', type=int, default=8080, help='Port for Web Server [ Default : 8080 ]')
 
 args = parser.parse_args()
@@ -80,7 +80,7 @@ def ver_check():
     quo.echo(f"[+]", fg="vgreen", bold=True, nl=False)
     quo.echo(f" Checking new updates...", fg="vcyan")
     cc.log("")
-    ver_url = 'https://raw.githubusercontent.com/secretum-inc/invenio/main/version.txt'
+    ver_url = 'https://raw.githubusercontent.com/secretum-inc/reperio/main/db/version.txt'
     try:
         ver_rqst = requests.get(ver_url)
         ver_sc = ver_rqst.status_code
@@ -100,7 +100,7 @@ def ver_check():
 def tunnel_select():
     if tunnel_mode == None:
         serveo()
-    elif tunnel_mode == 'manual':
+    elif tunnel_mode == 'select':
         quo.echo(f"[+]", fg="vgreen", bold=True, nl=False)
         quo.echo(f" Skipping", nl=False, fg="vcyan")
         quo.echo(f" Serveo, ", italic=True, fg="vyellow", nl=False, bold=True)
@@ -185,7 +185,7 @@ def serveo():
                         if 'HTTP' in elem:
                             elem = elem.split(' ')
                             url = elem[4].strip()
-                            print(G + '[+]' + C + ' URL : ' + W + url + '\n')
+                            print('[+]' + ' URL : ' + url + '\n')
                             flag = True
                         else:
                             pass
