@@ -7,7 +7,7 @@ echo '[!] Installing Dependencies...'
 echo '    Python3'
 apt install python3 pip
 echo '    Quo'
-pip3 install quo
+pip3 install quo==2021.6
 echo '    PHP'
 apt-get -y install php
 echo '    ssh'
